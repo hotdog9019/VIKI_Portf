@@ -12,10 +12,8 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-      <section class="hero" id="top">
-        <div class="hero__top">
-          <nav class="section-nav" aria-label="Навигация по портфолио">
+    <header class="site-header">
+      <nav class="section-nav" aria-label="Навигация по портфолио">
             <a href="#top">Дурманова Виктория</a>
             <span class="section-nav__details">
               <a href="https://t.me/dzu0tg">dzu0tg</a>
@@ -23,6 +21,10 @@
             </span>
             <a class="section-nav__button" href="#contacts">Связаться</a>
           </nav>
+    </header>
+    <main>
+      <section class="hero" id="top">
+        <div class="hero__top" data-header-theme="dark">
           <div class="hero__heading">
             <h1>ПОРТФОЛИО</h1>
             <div class="hero__caption">
@@ -39,14 +41,6 @@
       </section>
 
       <section class="projects section-pad" id="projects">
-        <nav class="section-nav section-nav--light" aria-label="Раздел проектов">
-          <a href="#projects">Дурманова Виктория</a>
-          <span class="section-nav__details">
-            <a href="https://t.me/dzu0tg">dzu0tg</a>
-            <a href="mailto:luchikviki@yandex.ru">luchikviki@yandex.ru</a>
-          </span>
-          <a class="section-nav__button" href="#contacts">Связаться</a>
-        </nav>
         <div class="project-list">
           <a class="project-row" href="#project-one">
             <span class="project-row__number">01.</span>
@@ -69,15 +63,6 @@
             <span class="project-row__note">Описание проекта</span>
           </div>
         </div>
-
-        <nav class="section-nav section-nav--light section-nav--between" aria-label="Навигация проекта">
-          <a href="#top">Дурманова Виктория</a>
-          <span class="section-nav__details">
-            <a href="https://t.me/dzu0tg">dzu0tg</a>
-            <a href="mailto:luchikviki@yandex.ru">luchikviki@yandex.ru</a>
-          </span>
-          <a class="section-nav__button" href="#contacts">Связаться</a>
-        </nav>
         <div class="work" id="project-one">
           <div class="work__heading">
             <span class="project-row__number">01.</span>
@@ -92,14 +77,6 @@
       </section>
 
       <section class="about section-pad" id="about">
-        <nav class="section-nav section-nav--light" aria-label="Раздел обо мне">
-          <a href="#about">Дурманова Виктория</a>
-          <span class="section-nav__details">
-            <a href="https://t.me/dzu0tg">dzu0tg</a>
-            <a href="mailto:luchikviki@yandex.ru">luchikviki@yandex.ru</a>
-          </span>
-          <a class="section-nav__button" href="#contacts">Связаться</a>
-        </nav>
         <div class="about__art">
           <img
             src="assets/Mask group.png"
@@ -112,15 +89,6 @@
           <p>Я ВИКИ МНЕ 20 ЛЕТ</p>
           <span class="about__tag">Я ДИЗАЙНЕРКА UI/UX</span>
         </div>
-
-        <nav class="section-nav section-nav--light section-nav--between" aria-label="Навигация по навыкам">
-          <a href="#top">Дурманова Виктория</a>
-          <span class="section-nav__details">
-            <a href="https://t.me/dzu0tg">dzu0tg</a>
-            <a href="mailto:luchikviki@yandex.ru">luchikviki@yandex.ru</a>
-          </span>
-          <a class="section-nav__button" href="#contacts">Связаться</a>
-        </nav>
 
         <div class="skills" id="skills" aria-label="Инструменты">
           <img src="assets/material-icon-theme_figma.svg" alt="Figma" />
@@ -186,14 +154,6 @@
       </section>
 
       <section class="contact section-pad" id="contacts">
-        <nav class="section-nav section-nav--light" aria-label="Раздел контактов">
-          <a href="#top">Дурманова Виктория</a>
-          <span class="section-nav__details">
-            <a href="https://t.me/dzu0tg">dzu0tg</a>
-            <a href="mailto:luchikviki@yandex.ru">luchikviki@yandex.ru</a>
-          </span>
-          <a class="section-nav__button" href="mailto:luchikviki@yandex.ru">Связаться</a>
-        </nav>
         <div class="contact__title">
           <h2>СВЯЖИТЕСЬ СО МНОЙ</h2>
           <a
@@ -229,14 +189,16 @@
           </label>
           <button type="submit">
             <span>ОТПРАВИТЬ</span>
-            <span aria-hidden="true">→</span>
+            <svg class="contact-form__arrow" viewBox="0 0 120 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M1 12H117M108 3L117 12L108 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </button>
           <p class="contact-form__status" id="form-status" role="status"></p>
         </form>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__details">
+      <div class="footer__details" data-header-theme="dark">
         <nav aria-label="Навигация в подвале">
           <a href="#projects">Проекты</a>
           <a href="#skills">Навыки</a>
